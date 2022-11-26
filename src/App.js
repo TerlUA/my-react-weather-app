@@ -1,25 +1,26 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-
-function App() {
+import "./Weather.css";
+import Weather from "./Weather";
+import img from "../src/img/sky.jpg";
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Test Weather
-        </a>
-      </header>
+      <div className="container" style={{ backgroundImage: `url(${img})` }}>
+        <Weather />
+      </div>
+      <footer>
+        <small>
+          <a
+            href="https://github.com/TerlUA/my-react-weather-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open-source code
+          </a>
+          , by Olena Terletska
+        </small>
+      </footer>
     </div>
   );
 }
-
-export default App;
